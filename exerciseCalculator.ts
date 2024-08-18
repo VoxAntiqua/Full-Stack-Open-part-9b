@@ -46,7 +46,7 @@ const calculateExercises = (
   } else if (average - targetHours < 1) {
     rating = 2;
     ratingDescription = 'You met your training goal';
-  } else if (average - targetHours >= 1) {
+  } else {
     rating = 3;
     ratingDescription = 'You greatly exceeded your training goal';
   }
