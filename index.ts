@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { calculateBmi } from './bmiCalculator';
+import { calculateExercises } from './exerciseCalculator';
 const app = express();
 app.use(express.json());
 
@@ -47,7 +48,7 @@ app.post('/exercises', (req: Request, res: Response) => {
         error: 'Malformatted parameters: all parameters must be numbers',
       });
     }
-    res.send('Request okay');
+    res.send(calculateExercises(dailyHours, target));
   }
 });
 
