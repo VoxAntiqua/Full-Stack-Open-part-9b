@@ -30,6 +30,8 @@ app.get('/bmi', (req: Request, res: Response) => {
   }
 });
 
+app.post('/exercises', (req: Request, res: Response) => {});
+
 const PORT = 3003;
 
 app.listen(PORT, () => {
